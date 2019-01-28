@@ -1,4 +1,4 @@
 package com.example.tictactwo;
 
-public class NotaktoActivity {
+public class MisereActivity {
 }

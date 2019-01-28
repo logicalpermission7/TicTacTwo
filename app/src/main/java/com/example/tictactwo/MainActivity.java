@@ -39,12 +39,12 @@ public class MainActivity extends AppCompatActivity {
         //-------------------------------------------------------------------------sounds END
 
 
-        Button notaktoButton = findViewById(R.id.button_notakto);
-        notaktoButton.setOnClickListener(new View.OnClickListener(){
+        Button misereButton = findViewById(R.id.button_misere);
+        misereButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
                 soundPool.play(Tic_sound, 1, 1, 0, 0, 1);
-                notaktoGame();
+                misereGame();
 
             }
         });
@@ -76,10 +76,11 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
+//----------------Functions created to allow buttons to work and show additional pages---------
 
-    private void notaktoGame(){
+    private void misereGame(){
         Intent intent = new Intent(getApplicationContext(),
-                NotaktoActivity.class);
+                MisereActivity.class);
         startActivity(intent);
 
     }
