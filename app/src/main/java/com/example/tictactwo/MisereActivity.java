@@ -1,12 +1,15 @@
 package com.example.tictactwo;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.graphics.Color;
 import android.media.AudioAttributes;
 import android.media.SoundPool;
 import android.os.Build;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -97,9 +100,9 @@ public class MisereActivity extends Activity implements View.OnClickListener {
 
         if (checkForWin()) {
             if (player1Turn) {
-                player1Wins();
+                player1Loose();
             } else {
-                player2Wins();
+                player2Loose();
             }
         } else if (roundCount == 9) {
             draw();
@@ -152,25 +155,41 @@ public class MisereActivity extends Activity implements View.OnClickListener {
 
 
 
-    private void player1Wins() {
+    private void player1Loose() {
         player2Points++;
-        Toast.makeText(this, "Player 1 loose!", Toast.LENGTH_LONG).show();
+        LayoutInflater inflater=getLayoutInflater();
+        View toastLayout=inflater.inflate(R.layout.custom_toast,(ViewGroup)findViewById(R.id.showCustom));
+        Toast toast=new Toast(getApplicationContext());
+        toast.setDuration(Toast.LENGTH_LONG);
+        toast.setView(toastLayout);
+        toast.show();
         soundPool.play(sound2, 1, 1, 0, 0, 1);
         updatePointsText();
         resetBoard();
     }
 
-    private void player2Wins() {
+    private void player2Loose() {
         player1Points++;
-        Toast.makeText(this, "Player 2 loose!", Toast.LENGTH_LONG).show();
+        LayoutInflater inflater=getLayoutInflater();
+        View toastLayout=inflater.inflate(R.layout.custom_toast2,(ViewGroup)findViewById(R.id.showCustom));
+        Toast toast=new Toast(getApplicationContext());
+        toast.setDuration(Toast.LENGTH_LONG);
+        toast.setView(toastLayout);
+        toast.show();
         soundPool.play(sound2, 1, 1, 0, 0, 1);
         updatePointsText();
         resetBoard();
     }
 
     private void draw() {
-        Toast.makeText(this, "Its a Draw!", Toast.LENGTH_LONG).show();
-        soundPool.play(sound1, 1, 1, 0, 0, 1);
+        resetGame();
+        LayoutInflater inflater=getLayoutInflater();
+        View toastLayout=inflater.inflate(R.layout.custom_toast3,(ViewGroup)findViewById(R.id.showCustom));
+        Toast toast=new Toast(getApplicationContext());
+        toast.setDuration(Toast.LENGTH_LONG);
+        toast.setView(toastLayout);
+        toast.show();
+        soundPool.play(sound2, 1, 1, 0, 0, 1);
         resetBoard();
     }
 
