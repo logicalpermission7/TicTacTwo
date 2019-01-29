@@ -1,6 +1,5 @@
 package com.example.tictactwo;
 
-import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.graphics.Color;
 import android.media.AudioAttributes;
@@ -216,6 +215,11 @@ public class MisereActivity extends Activity implements View.OnClickListener {
         resetBoard();
 
 
+    }
+
+    private void twoLosers(){
+        player1Points = player1Points - 1;
+        player2Points = player2Points - 1;
     }
 
     // for rotational purposes on phone. saves data when orientation is changed

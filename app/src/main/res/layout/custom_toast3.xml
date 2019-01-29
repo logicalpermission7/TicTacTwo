@@ -12,7 +12,7 @@
         android:drawablePadding="10dp"
         android:gravity="center"
         android:padding="15dp"
-        android:text="DRAW: TWO LOSERS!"
+        android:text="DRAW: BACK TO ZERO!"
         android:textColor="#000000"
         android:textSize="20sp" />
 
