@@ -29,6 +29,7 @@ public class MisereActivity extends Activity implements View.OnClickListener {
     private SoundPool soundPool;
     private int sound1;
     private int sound2;
+    private int sound3;
 
 
 
@@ -53,6 +54,7 @@ public class MisereActivity extends Activity implements View.OnClickListener {
         }
         sound1 = soundPool.load(this, R.raw.tic, 1);
         sound2 = soundPool.load(this, R.raw.laugh, 1);
+        sound3 = soundPool.load(this, R.raw.win, 1);
 
 
 //-----------------------------------------------------------------------To play sounds from a sound pool end
@@ -105,6 +107,16 @@ public class MisereActivity extends Activity implements View.OnClickListener {
             }
         } else if (roundCount == 9) {
             draw();
+
+        } else if (player1Points == 5) {
+            finalWinner1();
+            soundPool.play(sound3, 1, 1, 0, 0, 1);
+
+        } else if (player2Points == 5) {
+            finalWinner2();
+            soundPool.play(sound3, 1, 1, 0, 0, 1);
+
+
         } else {
             player1Turn = !player1Turn;
         }
@@ -181,7 +193,6 @@ public class MisereActivity extends Activity implements View.OnClickListener {
     }
 
     private void draw() {
-        resetGame();
         LayoutInflater inflater=getLayoutInflater();
         View toastLayout=inflater.inflate(R.layout.custom_toast3,(ViewGroup)findViewById(R.id.showCustom));
         Toast toast=new Toast(getApplicationContext());
@@ -217,10 +228,29 @@ public class MisereActivity extends Activity implements View.OnClickListener {
 
     }
 
-    private void twoLosers(){
-        player1Points = player1Points - 1;
-        player2Points = player2Points - 1;
+    private void finalWinner1(){
+        resetGame();
+        LayoutInflater inflater=getLayoutInflater();
+        View toastLayout=inflater.inflate(R.layout.custom_toast4,(ViewGroup)findViewById(R.id.showCustom));
+        Toast toast=new Toast(getApplicationContext());
+        toast.setDuration(Toast.LENGTH_LONG);
+        toast.setView(toastLayout);
+        toast.show();
     }
+
+
+    private void finalWinner2(){
+        resetGame();
+        LayoutInflater inflater=getLayoutInflater();
+        View toastLayout=inflater.inflate(R.layout.custom_toast5,(ViewGroup)findViewById(R.id.showCustom));
+        Toast toast=new Toast(getApplicationContext());
+        toast.setDuration(Toast.LENGTH_LONG);
+        toast.setView(toastLayout);
+        toast.show();
+    }
+
+
+
 
     // for rotational purposes on phone. saves data when orientation is changed
     @Override

@@ -65,12 +65,8 @@ public class MainActivity extends AppCompatActivity {
         webButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // what happens when user presses More
-                soundPool.play(Tic_sound, 1, 1, 0, 0, 1);
-                final String URL = "https://en.wikipedia.org/wiki/Tic-tac-toe_variants";
-                Uri uri = Uri.parse(URL);
-                Intent i = new Intent(Intent.ACTION_VIEW, uri);
-                startActivity(i);
+                    soundPool.play(Tic_sound, 1, 1, 0, 0, 1);
+                    instructionsPage();
             }
         });
 
@@ -91,6 +87,15 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
 
     }
+
+    private void instructionsPage(){
+        Intent intent = new Intent(getApplicationContext(),
+                InstructionsActivity.class);
+        startActivity(intent);
+
+    }
+
+
 }
 
 
