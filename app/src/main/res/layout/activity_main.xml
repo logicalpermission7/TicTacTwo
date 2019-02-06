@@ -40,22 +40,26 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="176dp"
+        android:layout_marginTop="172dp"
         android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
         android:background="@drawable/button_file"
         android:text="Misere"
         android:textColor="#000"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.056"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.003" />
 
     <Button
         android:id="@+id/button_how"
-        android:layout_width="114dp"
+        android:layout_width="102dp"
         android:layout_height="wrap_content"
         android:layout_above="@+id/button_misere"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="172dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:background="@drawable/button_file"
@@ -63,31 +67,32 @@
         android:textColor="#000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.505"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_sos"
-        app:layout_constraintVertical_bias="0.014" />
+        app:layout_constraintHorizontal_bias="0.636"
+        app:layout_constraintStart_toEndOf="@+id/button_sos"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.003" />
 
     <Button
         android:id="@+id/button_sos"
         android:layout_width="114dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="8dp"
+        android:layout_marginTop="172dp"
+        android:layout_marginBottom="8dp"
         android:background="@drawable/button_file"
         android:text="SOS"
         android:textColor="#000"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.505"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_misere" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/button_how"
+        app:layout_constraintStart_toEndOf="@+id/button_misere"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.003" />
 
 
     <ImageView
         android:id="@+id/skulll"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="456dp"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
@@ -95,5 +100,19 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/skull" />
+
+    <ImageView
+        android:id="@+id/tictac"
+        android:layout_width="157dp"
+        android:layout_height="134dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/skulll"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/tictactoe" />
 
 </android.support.constraint.ConstraintLayout>
