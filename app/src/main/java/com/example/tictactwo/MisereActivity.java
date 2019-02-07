@@ -163,9 +163,6 @@ public class MisereActivity extends Activity implements View.OnClickListener {
         return false;
     }
 
-
-
-
     private void player1Loose() {
         player2Points++;
         LayoutInflater inflater=getLayoutInflater();
