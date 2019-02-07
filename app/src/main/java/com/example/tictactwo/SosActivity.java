@@ -26,7 +26,6 @@ public class SosActivity extends Activity implements View.OnClickListener {
 
     private TextView textViewPlayer1;
     private TextView textViewPlayer2;
-    //private TextView textViewTurn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,7 +33,6 @@ public class SosActivity extends Activity implements View.OnClickListener {
         setContentView(R.layout.sos_game);
         textViewPlayer1 = findViewById(R.id.text_view_p1);
         textViewPlayer2 = findViewById(R.id.text_view_p2);
-        //textViewTurn = findViewById(R.id.tv_turn);
 
 
         for (int i = 0; i < 6; i++) {
@@ -62,13 +60,10 @@ public class SosActivity extends Activity implements View.OnClickListener {
             return;
         }
         if (playerOneTurn) {
-            //textViewTurn.setText("Player 1's Turn");
-            //textViewTurn.setTextColor(Color.parseColor("#00FF00));
-            //((Button)v).setText("S");
+
+            ((Button)v).setText("S");
         } else {
-            //textViewTurn.setText("Player 2's Turn");
-            //textViewTurn.setTextColor(Color.parseColor("#FF0000));
-            //((Button)v).setText("O");
+            ((Button)v).setText("O");
         }
 
         roundCount++;
@@ -86,7 +81,7 @@ public class SosActivity extends Activity implements View.OnClickListener {
     }
 
     private boolean checkForWin() {
-        String[][] field = new String[6][6];
+        String[][] field = new String[3][3];
 
         for (int i = 0; i < 6; i++) {
             for (int j = 0; j < 6; j++) {
@@ -98,14 +93,14 @@ public class SosActivity extends Activity implements View.OnClickListener {
 
         private void playerOneWins() {
             playerOnePoints++;
-            //textViewTurn.setText("Player 1 Wins");
+            Toast.makeText(getApplicationContext(), "Player 1 wins!", Toast.LENGTH_LONG).show();
             updatePointsText();
             resetBoard();
         }
 
         private void playerTwoWins() {
             playerTwoPoints++;
-            //textViewTurn.setText("Player 2 Wins");
+            Toast.makeText(getApplicationContext(), "Player 2 wins!", Toast.LENGTH_LONG).show();
             updatePointsText();
             resetBoard();
         }
