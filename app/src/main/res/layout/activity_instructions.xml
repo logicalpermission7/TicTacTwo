@@ -19,4 +19,24 @@
         android:textSize="20sp"
         android:textColor="@color/buttonNotPressed"
         android:text="In misère tic-tac-toe, the first player is the X. You get a point if the opponent gets his pieces in a row. First player to reach 5 points wins the game. This game is also known as avoidance tic tac toe, toe-tac-tic, inverse tic tac toe, or reverse tic tac toe. A 3×3 game is a draw. More generally, the first player can draw or win on any board (of any dimension) whose side length is odd, by playing first in the central cell and then mirroring the opponent's moves." />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:textColor="#ff0000"
+        android:text="How to play YES SOS:" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textColor="@color/buttonNotPressed"
+        android:text="In Yes Sos, the first player always starts with an S. The object in this game is to get SOS in a row or an empty space between two S's. There are 20 rounds. It is up to the players to keep track of score:" />
+
+
+
+
 </LinearLayout>

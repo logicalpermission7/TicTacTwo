@@ -8,7 +8,7 @@ import android.media.SoundPool;
 import android.os.Build;
 import android.view.View;
 import android.widget.Button;
-import android.net.Uri;
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -38,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
 
         //-------------------------------------------------------------------------sounds END
 
+        //---------------Methods used for buttons------------------------
 
         Button misereButton = findViewById(R.id.button_misere);
         misereButton.setOnClickListener(new View.OnClickListener(){
@@ -72,6 +73,9 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
+    //------------------End of Methods------------------------------------------
+
+
 //----------------Functions created to allow buttons to work and show additional pages---------
 
     private void misereGame(){
