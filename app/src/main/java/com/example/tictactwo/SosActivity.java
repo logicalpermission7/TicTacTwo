@@ -18,15 +18,20 @@ public class SosActivity extends Activity implements View.OnClickListener {
 
     private Button[][] buttons = new Button[4][4];
 
-    private boolean playerTurn = true;
+    private boolean player1Turn = true;
+    private boolean player2Turn = true;
 
 
     private int roundCount;
 
-    private int playerRounds;
+    private int player1Points;
+
+    private int player2Points;
+
 
 
     private TextView textViewPlayer1;
+    private TextView textViewPlayer2;
     private SoundPool soundPool;
     private int sound1;
     private int sound2;
@@ -39,6 +44,7 @@ public class SosActivity extends Activity implements View.OnClickListener {
         setContentView(R.layout.sos_game);
 
         textViewPlayer1 = findViewById(R.id.text_view_p1);
+        textViewPlayer2 = findViewById(R.id.text_view_p2);
 //-----------------------------------------------------------------------To play sounds from a sound pool start
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             AudioAttributes audioAttributes = new AudioAttributes.Builder()
@@ -87,11 +93,14 @@ public class SosActivity extends Activity implements View.OnClickListener {
             return;
         }
 
-        if (playerTurn) {
+        if (player1Turn)
+        {
             ((Button) v).setText("S");
             ((Button) v).setTextColor(Color.RED);
 
-        }else {
+        }
+        else if (player2Turn)
+            {
             ((Button) v).setText("O");
             ((Button) v).setTextColor(Color.WHITE);
         }
@@ -99,19 +108,25 @@ public class SosActivity extends Activity implements View.OnClickListener {
         roundCount++;
 
         if (checkForWin()) {
-            if (playerTurn) {
-                playerWin();
+            if (player1Turn) {
+                player1Win();
+            }else{
+                player2Win();
             }
         } else if (roundCount == 16) {
             draw();
 
-        } else if (playerRounds == 20) {
+        } else if (player1Points == 10) {
             finalWinner1();
             soundPool.play(sound2, 1, 1, 0, 0, 1);
 
 
+        } else if(player2Points == 10){
+            finalWinner1();
+            soundPool.play(sound2, 1, 1, 0, 0, 1);
+
         } else {
-            playerTurn = !playerTurn;
+            player1Turn = !player1Turn;
         }
 
     }
@@ -219,19 +234,35 @@ public class SosActivity extends Activity implements View.OnClickListener {
             return true;
         }
 
+        if (field[1][0].equals(field[3][2])
+                && !field[1][0].equals("")) {
+            return true;
+        }
+
+
         return false;
     }
 
 
 
 
-    private void playerWin() {
-        playerRounds++;
+    private void player1Win() {
+        player1Points++;
         soundPool.play(sound2, 1, 1, 0, 0, 1);
         updatePointsText();
-        resetBoard();
+        resetBoard1();
 
     }
+
+
+    private void player2Win() {
+        player2Points++;
+        soundPool.play(sound2, 1, 1, 0, 0, 1);
+        updatePointsText();
+        resetBoard2();
+
+    }
+
 
 
     private void draw() {
@@ -242,15 +273,16 @@ public class SosActivity extends Activity implements View.OnClickListener {
         toast.setView(toastLayout);
         toast.show();
         soundPool.play(sound2, 1, 1, 0, 0, 1);
-        resetBoard();
+        resetBoard1();
     }
 
     private void updatePointsText() {
-        textViewPlayer1.setText( playerRounds + " Out of 20 Rounds ");
+        textViewPlayer1.setText( player1Points + " Out of 20 Rounds ");
+        textViewPlayer2.setText( player2Points + " Out of 20 Rounds ");
 
     }
 
-    private void resetBoard() {
+    private void resetBoard1() {
         for (int i = 0; i < 4; i++) {
             for (int j = 0; j < 4; j++) {
                 buttons[i][j].setText("");
@@ -258,23 +290,39 @@ public class SosActivity extends Activity implements View.OnClickListener {
         }
 
         roundCount = 0;
-        playerTurn = true;
+        player2Turn = true;
     }
+
+
+    private void resetBoard2() {
+        for (int i = 0; i < 4; i++) {
+            for (int j = 0; j < 4; j++) {
+                buttons[i][j].setText("");
+            }
+        }
+
+        roundCount = 0;
+        player1Turn = true;
+    }
+
+
 
 
 
 
 
     private void resetGame() {
-        playerRounds = 0;
+        player1Points = 0;
+        player2Points = 0;
         updatePointsText();
-        resetBoard();
+        resetBoard1();
 
 
     }
 
     private void finalWinner1(){
-        resetBoard();
+        resetBoard1();
+        resetGame();
         LayoutInflater inflater=getLayoutInflater();
         View toastLayout=inflater.inflate(R.layout.custom_toast4,(ViewGroup)findViewById(R.id.showCustom));
         Toast toast=new Toast(getApplicationContext());
@@ -292,8 +340,8 @@ public class SosActivity extends Activity implements View.OnClickListener {
         super.onSaveInstanceState(outState);
 
         outState.putInt("roundCount", roundCount);
-        outState.putInt("playerPoints", playerRounds);
-        outState.putBoolean("player1Turn", playerTurn);
+        outState.putInt("playerPoints", player1Points);
+        outState.putBoolean("player1Turn", player1Turn);
     }
 
     @Override
@@ -301,8 +349,8 @@ public class SosActivity extends Activity implements View.OnClickListener {
         super.onRestoreInstanceState(savedInstanceState);
 
         roundCount = savedInstanceState.getInt("roundCount");
-        playerRounds = savedInstanceState.getInt("player1points");
-        playerTurn = savedInstanceState.getBoolean("player1Turn");
+        player1Points = savedInstanceState.getInt("player1points");
+        player1Turn = savedInstanceState.getBoolean("player1Turn");
 
     }
 }

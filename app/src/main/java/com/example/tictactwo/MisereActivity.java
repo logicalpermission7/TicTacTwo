@@ -89,12 +89,12 @@ public class MisereActivity extends Activity implements View.OnClickListener {
 
         if (player1Turn) {
             ((Button) v).setText("x");
-            ((Button) v).setTextColor(Color.WHITE);
+            ((Button) v).setTextColor(Color.RED);
 
 
         } else {
             ((Button) v).setText("o");
-            ((Button) v).setTextColor(Color.WHITE);
+            ((Button) v).setTextColor(Color.RED);
         }
 
         roundCount++;
@@ -201,8 +201,8 @@ public class MisereActivity extends Activity implements View.OnClickListener {
     }
 
     private void updatePointsText() {
-        textViewPlayer1.setText("Player 1 = " + player1Points);
-        textViewPlayer2.setText("Player 2 = " + player2Points);
+        textViewPlayer1.setText("Loser You = " + player1Points);
+        textViewPlayer2.setText("Loser Friend = " + player2Points);
     }
 
     private void resetBoard() {

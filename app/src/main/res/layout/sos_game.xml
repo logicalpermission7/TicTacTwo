@@ -7,16 +7,28 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="71dp">
 
         <TextView
             android:id="@+id/text_view_p1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Welcome to YES SOS."
+            android:freezesText="true"
+            android:text="get ready player 1."
             android:textColor="#ffffff"
-            android:textSize="20sp"
-            android:freezesText="true"/>
+            android:textSize="20sp" />
+
+
+        <TextView
+            android:id="@+id/text_view_p2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="17dp"
+            android:freezesText="true"
+            android:text="get ready player 2."
+            android:textColor="#ffffff"
+            android:textSize="20sp" />
 
 
         <Button
@@ -29,9 +41,9 @@
             android:layout_marginEnd="23dp"
             android:layout_marginRight="23dp"
             android:background="#000000"
+            android:text="RESET"
             android:textColor="#ffffff"
-            android:textSize="20sp"
-            android:text="RESET" />
+            android:textSize="20sp" />
     </RelativeLayout>
 
     <LinearLayout
