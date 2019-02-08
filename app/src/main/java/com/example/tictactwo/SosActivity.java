@@ -277,8 +277,8 @@ public class SosActivity extends Activity implements View.OnClickListener {
     }
 
     private void updatePointsText() {
-        textViewPlayer1.setText( player1Points + " Out of 20 Rounds ");
-        textViewPlayer2.setText( player2Points + " Out of 20 Rounds ");
+        textViewPlayer1.setText( player1Points + " Out of 10 Rounds ");
+        textViewPlayer2.setText( player2Points + " Out of 10 Rounds ");
 
     }
 
