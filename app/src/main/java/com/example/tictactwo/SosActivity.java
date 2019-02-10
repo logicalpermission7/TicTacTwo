@@ -274,6 +274,45 @@ public class SosActivity extends Activity implements View.OnClickListener {
             }
         }
 
+
+
+        //checking diagonals left
+
+        for (int i = 0; i < 4; i++) {
+            if (field[0][0].contentEquals("S") && field[1][1].contentEquals("O") && field[2][2].contentEquals("S")
+                    && !field[0][0].equals("")) {
+                return true;
+            }
+        }
+
+
+        for (int i = 0; i < 4; i++) {
+            if (field[1][1].contentEquals("S") && field[2][2].contentEquals("O") && field[3][3].contentEquals("S")
+                    && !field[1][1].equals("")) {
+                return true;
+            }
+        }
+
+
+        for (int i = 0; i < 4; i++) {
+            if (field[1][0].contentEquals("S") && field[2][1].contentEquals("O") && field[3][2].contentEquals("S")
+                    && !field[1][0].equals("")) {
+                return true;
+            }
+        }
+
+
+        for (int i = 0; i < 4; i++) {
+            if (field[0][1].contentEquals("S") && field[1][2].contentEquals("O") && field[2][3].contentEquals("S")
+                    && !field[0][1].equals("")) {
+                return true;
+            }
+        }
+
+
+
+
+
         return false;
     }
 
