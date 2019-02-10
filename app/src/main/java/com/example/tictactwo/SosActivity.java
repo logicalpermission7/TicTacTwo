@@ -140,7 +140,7 @@ public class SosActivity extends Activity implements View.OnClickListener {
             }
         }
 
-        for (int i = 0; i < 4; i++) {
+    /* for (int i = 0; i < 4; i++) {
             if (field[i][0].equals(field[i][2])
                     && !field[i][0].equals("")) {
                 return true;
@@ -152,12 +152,87 @@ public class SosActivity extends Activity implements View.OnClickListener {
                     && !field[0][i].equals("")) {
                 return true;
             }
-        }
-
+        }*/
+/*
         if (field[0][0].equals(field[2][1])
                 && !field[0][0].equals("")) {
             return true;
+        } */
+
+//checking row 1
+        for (int i = 0; i < 4; i++) {
+            if (field[0][0].contentEquals("S") && field[0][1].contentEquals("O") && field[0][2].contentEquals("S")
+                    && !field[0][0].equals("")) {
+                return true;
+            }
         }
+
+
+        for (int i = 0; i < 4; i++) {
+            if (field[0][1].contentEquals("S") && field[0][2].contentEquals("O") && field[0][3].contentEquals("S")
+                    && !field[0][1].equals("")) {
+                return true;
+            }
+        }
+
+        //checking row 2
+        for (int i = 0; i < 4; i++) {
+            if (field[1][0].contentEquals("S") && field[1][1].contentEquals("O") && field[1][2].contentEquals("S")
+                    && !field[1][0].equals("")) {
+                return true;
+            }
+        }
+
+
+        for (int i = 0; i < 4; i++) {
+            if (field[1][1].contentEquals("S") && field[1][2].contentEquals("O") && field[1][3].contentEquals("S")
+                    && !field[1][1].equals("")) {
+                return true;
+            }
+        }
+
+        //checking row 3
+        for (int i = 0; i < 4; i++) {
+            if (field[2][0].contentEquals("S") && field[2][1].contentEquals("O") && field[2][2].contentEquals("S")
+                    && !field[2][0].equals("")) {
+                return true;
+            }
+        }
+
+
+        for (int i = 0; i < 4; i++) {
+            if (field[2][1].contentEquals("S") && field[2][2].contentEquals("O") && field[0][3].contentEquals("S")
+                    && !field[2][1].equals("")) {
+                return true;
+            }
+        }
+
+            //checking row 4
+        for (int i = 0; i < 4; i++) {
+            if (field[3][0].contentEquals("S") && field[3][1].contentEquals("O") && field[3][2].contentEquals("S")
+                    && !field[3][0].equals("")) {
+                return true;
+            }
+        }
+
+
+        for (int i = 0; i < 4; i++) {
+            if (field[3][1].contentEquals("S") && field[3][2].contentEquals("O") && field[3][3].contentEquals("S")
+                    && !field[3][1].equals("")) {
+                return true;
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+/*
 
         if (field[0][2].equals(field[2][0])
                 && !field[0][2].equals("")) {
@@ -237,7 +312,7 @@ public class SosActivity extends Activity implements View.OnClickListener {
         if (field[1][0].equals(field[3][2])
                 && !field[1][0].equals("")) {
             return true;
-        }
+        } */
 
 
         return false;
