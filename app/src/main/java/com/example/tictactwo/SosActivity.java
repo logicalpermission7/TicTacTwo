@@ -309,9 +309,38 @@ public class SosActivity extends Activity implements View.OnClickListener {
             }
         }
 
+        //checking diagonals right
+
+        for (int i = 0; i < 4; i++) {
+            if (field[0][3].contentEquals("S") && field[1][2].contentEquals("O") && field[2][1].contentEquals("S")
+                    && !field[0][3].equals("")) {
+                return true;
+            }
+        }
 
 
+        for (int i = 0; i < 4; i++) {
+            if (field[1][2].contentEquals("S") && field[2][1].contentEquals("O") && field[3][0].contentEquals("S")
+                    && !field[1][2].equals("")) {
+                return true;
+            }
+        }
 
+
+        for (int i = 0; i < 4; i++) {
+            if (field[0][2].contentEquals("S") && field[1][1].contentEquals("O") && field[2][0].contentEquals("S")
+                    && !field[0][2].equals("")) {
+                return true;
+            }
+        }
+
+
+        for (int i = 0; i < 4; i++) {
+            if (field[1][3].contentEquals("S") && field[2][2].contentEquals("O") && field[3][1].contentEquals("S")
+                    && !field[1][3].equals("")) {
+                return true;
+            }
+        }
 
         return false;
     }
@@ -322,7 +351,6 @@ public class SosActivity extends Activity implements View.OnClickListener {
         soundPool.play(sound2, 1, 1, 0, 0, 1);
         updatePointsText();
         resetBoard1();
-
     }
 
 
@@ -331,7 +359,6 @@ public class SosActivity extends Activity implements View.OnClickListener {
         soundPool.play(sound2, 1, 1, 0, 0, 1);
         updatePointsText();
         resetBoard2();
-
     }
 
 
@@ -377,17 +404,11 @@ public class SosActivity extends Activity implements View.OnClickListener {
     }
 
 
-
-
-
-
-
     private void resetGame() {
         player1Points = 0;
         player2Points = 0;
         updatePointsText();
         resetBoard1();
-
 
     }
 
@@ -401,8 +422,6 @@ public class SosActivity extends Activity implements View.OnClickListener {
         toast.setView(toastLayout);
         toast.show();
     }
-
-
 
 
     // for rotational purposes on phone. saves data when orientation is changed
