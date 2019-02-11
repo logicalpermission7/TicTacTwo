@@ -1,43 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#000000">
-
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="90dp"
-        android:layout_height="109dp"
-        app:srcCompat="@drawable/elvisbueno" />
-
-    <TextView
-        android:id="@+id/textView5"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Developer: Elvis Bueno"
-        android:textColor="#ff0000" />
+    android:background="#000000"
+    android:gravity="center_horizontal|left"
+    android:orientation="vertical">
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="30sp"
+        android:text="How to play Misere:"
         android:textColor="#ff0000"
-        android:text="How to play Misere:" />
+        android:textSize="30sp" />
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="match_parent"
-        android:layout_height="280dp"
+        android:layout_height="wrap_content"
         android:text="In misère tic-tac-toe, the first player is the X. You get a point if the opponent gets his pieces in a row. First player to reach 5 points wins the game. This game is also known as avoidance tic tac toe, toe-tac-tic, inverse tic tac toe, or reverse tic tac toe. A 3×3 game is a draw. More generally, the first player can draw or win on any board (of any dimension) whose side length is odd, by playing first in the central cell and then mirroring the opponent's moves."
         android:textColor="@color/buttonNotPressed"
         android:textSize="20sp" />
 
     <TextView
+        android:id="@+id/textView5"
+        android:layout_width="match_parent"
+        android:layout_height="57dp"
+        android:text="Developer: Elvis Bueno"
+        android:textColor="#ff0000" />
+
+    <TextView
         android:id="@+id/textView3"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="41dp"
         android:text="How to play SOS:"
         android:textColor="#ff0000"
         android:textSize="30sp" />

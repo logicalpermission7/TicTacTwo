@@ -3,11 +3,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#000000">
+    android:background="#111111">
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="140dp">
+        android:layout_height="150dp">
 
         <TextView
             android:id="@+id/text_view_p1"
@@ -15,7 +15,7 @@
             android:layout_height="wrap_content"
             android:freezesText="true"
             android:text="Ready Loser 1:"
-            android:textColor="#008577"
+            android:textColor="#ffffff"
             android:textSize="30sp" />
 
         <TextView
@@ -25,7 +25,7 @@
             android:layout_below="@+id/text_view_p1"
             android:freezesText="true"
             android:text="Ready Loser 2:"
-            android:textColor="#008577"
+            android:textColor="#ffffff"
             android:textSize="30sp" />
 
         <Button
@@ -38,9 +38,9 @@
             android:layout_marginStart="46dp"
             android:layout_marginRight="260dp"
             android:layout_marginBottom="10dp"
-            android:background="#000000"
+            android:background="#111111"
             android:text="New Game"
-            android:textColor="#ff0000"
+            android:textColor="#add8e6"
             android:textSize="20sp" />
 
     </RelativeLayout>
@@ -55,7 +55,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@drawable/skull"
+            android:background="@color/colorAccent"
             android:freezesText="true"
             android:textSize="100sp" />
 
@@ -73,7 +73,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@drawable/skull"
+            android:background="@color/colorAccent"
             android:freezesText="true"
             android:textSize="100sp" />
     </LinearLayout>
@@ -97,7 +97,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@drawable/skull"
+            android:backgroundTint="@color/colorAccent"
             android:freezesText="true"
             android:textSize="100sp" />
 
@@ -121,7 +121,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@drawable/skull"
+            android:background="@color/colorAccent"
             android:freezesText="true"
             android:textSize="100sp" />
 
@@ -139,7 +139,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@drawable/skull"
+            android:background="@color/colorAccent"
             android:freezesText="true"
             android:textSize="100sp" />
     </LinearLayout>
