@@ -62,14 +62,13 @@ public class SosActivity extends Activity implements View.OnClickListener {
 
 
 
-//-----------------------------------------------------------------------To play sounds from a sound pool end
+//-------------------------------------------------------------To play sounds from a sound pool end
         for (int i = 0; i < 4; i++) {
             for (int j = 0; j < 4; j++) {
                 String buttonID = "button_" + i + j;
                 int resID = getResources().getIdentifier(buttonID, "id", getPackageName());
                 buttons[i][j] = findViewById(resID);
                 buttons[i][j].setOnClickListener(this);
-
             }
         }
 
@@ -79,13 +78,9 @@ public class SosActivity extends Activity implements View.OnClickListener {
             public void onClick(View v) {
                 soundPool.play(sound1, 1, 1, 0, 0, 1);
                 resetGame();
-
-
             }
         });
     }
-
-
 
     @Override
     public void onClick(View v) {
@@ -128,7 +123,6 @@ public class SosActivity extends Activity implements View.OnClickListener {
         } else {
             player1Turn = !player1Turn;
         }
-
     }
 
     private boolean checkForWin() {
@@ -140,18 +134,18 @@ public class SosActivity extends Activity implements View.OnClickListener {
             }
         }
 
-
         //checking row 1
         for (int i = 0; i < 4; i++) {
-            if (field[0][0].contentEquals("S") && field[0][1].contentEquals("O") && field[0][2].contentEquals("S")
+            if (field[0][0].contentEquals("S") && field[0][1].contentEquals("O")
+                    && field[0][2].contentEquals("S")
                     && !field[0][0].equals("")) {
                 return true;
             }
         }
 
-
         for (int i = 0; i < 4; i++) {
-            if (field[0][1].contentEquals("S") && field[0][2].contentEquals("O") && field[0][3].contentEquals("S")
+            if (field[0][1].contentEquals("S") && field[0][2].contentEquals("O")
+                    && field[0][3].contentEquals("S")
                     && !field[0][1].equals("")) {
                 return true;
             }
@@ -159,15 +153,16 @@ public class SosActivity extends Activity implements View.OnClickListener {
 
         //checking row 2
         for (int i = 0; i < 4; i++) {
-            if (field[1][0].contentEquals("S") && field[1][1].contentEquals("O") && field[1][2].contentEquals("S")
+            if (field[1][0].contentEquals("S") && field[1][1].contentEquals("O")
+                    && field[1][2].contentEquals("S")
                     && !field[1][0].equals("")) {
                 return true;
             }
         }
 
-
         for (int i = 0; i < 4; i++) {
-            if (field[1][1].contentEquals("S") && field[1][2].contentEquals("O") && field[1][3].contentEquals("S")
+            if (field[1][1].contentEquals("S") && field[1][2].contentEquals("O")
+                    && field[1][3].contentEquals("S")
                     && !field[1][1].equals("")) {
                 return true;
             }
@@ -175,15 +170,16 @@ public class SosActivity extends Activity implements View.OnClickListener {
 
         //checking row 3
         for (int i = 0; i < 4; i++) {
-            if (field[2][0].contentEquals("S") && field[2][1].contentEquals("O") && field[2][2].contentEquals("S")
+            if (field[2][0].contentEquals("S") && field[2][1].contentEquals("O")
+                    && field[2][2].contentEquals("S")
                     && !field[2][0].equals("")) {
                 return true;
             }
         }
 
-
         for (int i = 0; i < 4; i++) {
-            if (field[2][1].contentEquals("S") && field[2][2].contentEquals("O") && field[2][3].contentEquals("S")
+            if (field[2][1].contentEquals("S") && field[2][2].contentEquals("O")
+                    && field[2][3].contentEquals("S")
                     && !field[2][1].equals("")) {
                 return true;
             }
@@ -191,152 +187,150 @@ public class SosActivity extends Activity implements View.OnClickListener {
 
             //checking row 4
         for (int i = 0; i < 4; i++) {
-            if (field[3][0].contentEquals("S") && field[3][1].contentEquals("O") && field[3][2].contentEquals("S")
+            if (field[3][0].contentEquals("S") && field[3][1].contentEquals("O")
+                    && field[3][2].contentEquals("S")
                     && !field[3][0].equals("")) {
                 return true;
             }
         }
 
-
         for (int i = 0; i < 4; i++) {
-            if (field[3][1].contentEquals("S") && field[3][2].contentEquals("O") && field[3][3].contentEquals("S")
+            if (field[3][1].contentEquals("S") && field[3][2].contentEquals("O")
+                    && field[3][3].contentEquals("S")
                     && !field[3][1].equals("")) {
                 return true;
             }
         }
 
         //checking column 1
-
         for (int i = 0; i < 4; i++) {
-            if (field[0][0].contentEquals("S") && field[1][0].contentEquals("O") && field[2][0].contentEquals("S")
+            if (field[0][0].contentEquals("S") && field[1][0].contentEquals("O")
+                    && field[2][0].contentEquals("S")
                     && !field[0][0].equals("")) {
                 return true;
             }
         }
 
-
         for (int i = 0; i < 4; i++) {
-            if (field[1][0].contentEquals("S") && field[2][0].contentEquals("O") && field[3][0].contentEquals("S")
+            if (field[1][0].contentEquals("S") && field[2][0].contentEquals("O")
+                    && field[3][0].contentEquals("S")
                     && !field[1][0].equals("")) {
                 return true;
             }
         }
 
         //checking column 2
-
         for (int i = 0; i < 4; i++) {
-            if (field[0][1].contentEquals("S") && field[1][1].contentEquals("O") && field[2][1].contentEquals("S")
+            if (field[0][1].contentEquals("S") && field[1][1].contentEquals("O")
+                    && field[2][1].contentEquals("S")
                     && !field[0][1].equals("")) {
                 return true;
             }
         }
 
-
         for (int i = 0; i < 4; i++) {
-            if (field[1][1].contentEquals("S") && field[2][1].contentEquals("O") && field[3][1].contentEquals("S")
+            if (field[1][1].contentEquals("S") && field[2][1].contentEquals("O")
+                    && field[3][1].contentEquals("S")
                     && !field[1][1].equals("")) {
                 return true;
             }
         }
 
         //checking column 3
-
         for (int i = 0; i < 4; i++) {
-            if (field[0][2].contentEquals("S") && field[1][2].contentEquals("O") && field[2][2].contentEquals("S")
+            if (field[0][2].contentEquals("S") && field[1][2].contentEquals("O")
+                    && field[2][2].contentEquals("S")
                     && !field[0][2].equals("")) {
                 return true;
             }
         }
 
-
         for (int i = 0; i < 4; i++) {
-            if (field[1][2].contentEquals("S") && field[2][2].contentEquals("O") && field[3][2].contentEquals("S")
+            if (field[1][2].contentEquals("S") && field[2][2].contentEquals("O")
+                    && field[3][2].contentEquals("S")
                     && !field[1][2].equals("")) {
                 return true;
             }
         }
 
-
         //checking column 4
-
         for (int i = 0; i < 4; i++) {
-            if (field[0][3].contentEquals("S") && field[1][3].contentEquals("O") && field[2][3].contentEquals("S")
+            if (field[0][3].contentEquals("S") && field[1][3].contentEquals("O")
+                    && field[2][3].contentEquals("S")
                     && !field[0][3].equals("")) {
                 return true;
             }
         }
 
-
         for (int i = 0; i < 4; i++) {
-            if (field[1][3].contentEquals("S") && field[2][3].contentEquals("O") && field[3][3].contentEquals("S")
+            if (field[1][3].contentEquals("S") && field[2][3].contentEquals("O")
+                    && field[3][3].contentEquals("S")
                     && !field[1][3].equals("")) {
                 return true;
             }
         }
 
-
-
         //checking diagonals left
-
         for (int i = 0; i < 4; i++) {
-            if (field[0][0].contentEquals("S") && field[1][1].contentEquals("O") && field[2][2].contentEquals("S")
+            if (field[0][0].contentEquals("S") && field[1][1].contentEquals("O")
+                    && field[2][2].contentEquals("S")
                     && !field[0][0].equals("")) {
                 return true;
             }
         }
 
-
         for (int i = 0; i < 4; i++) {
-            if (field[1][1].contentEquals("S") && field[2][2].contentEquals("O") && field[3][3].contentEquals("S")
+            if (field[1][1].contentEquals("S") && field[2][2].contentEquals("O")
+                    && field[3][3].contentEquals("S")
                     && !field[1][1].equals("")) {
                 return true;
             }
         }
 
-
         for (int i = 0; i < 4; i++) {
-            if (field[1][0].contentEquals("S") && field[2][1].contentEquals("O") && field[3][2].contentEquals("S")
+            if (field[1][0].contentEquals("S") && field[2][1].contentEquals("O")
+                    && field[3][2].contentEquals("S")
                     && !field[1][0].equals("")) {
                 return true;
             }
         }
 
-
         for (int i = 0; i < 4; i++) {
-            if (field[0][1].contentEquals("S") && field[1][2].contentEquals("O") && field[2][3].contentEquals("S")
+            if (field[0][1].contentEquals("S") && field[1][2].contentEquals("O")
+                    && field[2][3].contentEquals("S")
                     && !field[0][1].equals("")) {
                 return true;
             }
         }
 
         //checking diagonals right
-
         for (int i = 0; i < 4; i++) {
-            if (field[0][3].contentEquals("S") && field[1][2].contentEquals("O") && field[2][1].contentEquals("S")
+            if (field[0][3].contentEquals("S") && field[1][2].contentEquals("O")
+                    && field[2][1].contentEquals("S")
                     && !field[0][3].equals("")) {
                 return true;
             }
         }
 
-
         for (int i = 0; i < 4; i++) {
-            if (field[1][2].contentEquals("S") && field[2][1].contentEquals("O") && field[3][0].contentEquals("S")
+            if (field[1][2].contentEquals("S") && field[2][1].contentEquals("O")
+                    && field[3][0].contentEquals("S")
                     && !field[1][2].equals("")) {
                 return true;
             }
         }
 
-
         for (int i = 0; i < 4; i++) {
-            if (field[0][2].contentEquals("S") && field[1][1].contentEquals("O") && field[2][0].contentEquals("S")
+            if (field[0][2].contentEquals("S") && field[1][1].contentEquals("O")
+                    && field[2][0].contentEquals("S")
                     && !field[0][2].equals("")) {
                 return true;
             }
         }
 
-
         for (int i = 0; i < 4; i++) {
-            if (field[1][3].contentEquals("S") && field[2][2].contentEquals("O") && field[3][1].contentEquals("S")
+            if (field[1][3].contentEquals("S") && field[2][2].contentEquals("O")
+                    && field[3][1].contentEquals("S")
                     && !field[1][3].equals("")) {
                 return true;
             }
@@ -345,7 +339,6 @@ public class SosActivity extends Activity implements View.OnClickListener {
         return false;
     }
 
-
     private void player1Win() {
         player1Points++;
         soundPool.play(sound2, 1, 1, 0, 0, 1);
@@ -353,15 +346,12 @@ public class SosActivity extends Activity implements View.OnClickListener {
         resetBoard1();
     }
 
-
     private void player2Win() {
         player2Points++;
         soundPool.play(sound2, 1, 1, 0, 0, 1);
         updatePointsText();
         resetBoard2();
     }
-
-
 
     private void draw() {
         LayoutInflater inflater=getLayoutInflater();
@@ -377,7 +367,6 @@ public class SosActivity extends Activity implements View.OnClickListener {
     private void updatePointsText() {
         textViewPlayer1.setText( player1Points + " Out of 10 Rounds ");
         textViewPlayer2.setText( player2Points + " Out of 10 Rounds ");
-
     }
 
     private void resetBoard1() {
@@ -391,25 +380,21 @@ public class SosActivity extends Activity implements View.OnClickListener {
         player2Turn = true;
     }
 
-
     private void resetBoard2() {
         for (int i = 0; i < 4; i++) {
             for (int j = 0; j < 4; j++) {
                 buttons[i][j].setText("");
             }
         }
-
         roundCount = 0;
         player1Turn = true;
     }
-
 
     private void resetGame() {
         player1Points = 0;
         player2Points = 0;
         updatePointsText();
         resetBoard1();
-
     }
 
     private void finalWinner1(){
@@ -422,7 +407,6 @@ public class SosActivity extends Activity implements View.OnClickListener {
         toast.setView(toastLayout);
         toast.show();
     }
-
 
     // for rotational purposes on phone. saves data when orientation is changed
     @Override
@@ -441,7 +425,6 @@ public class SosActivity extends Activity implements View.OnClickListener {
         roundCount = savedInstanceState.getInt("roundCount");
         player1Points = savedInstanceState.getInt("player1points");
         player1Turn = savedInstanceState.getBoolean("player1Turn");
-
     }
 }
 
