@@ -25,10 +25,10 @@
 
     <TextView
         android:id="@+id/textView5"
-        android:layout_width="match_parent"
-        android:layout_height="57dp"
+        android:layout_width="255dp"
+        android:layout_height="50dp"
         android:text="Developer: Elvis Bueno"
-        android:textColor="#ff0000" />
+        android:textColor="#00ff0f" />
 
     <TextView
         android:id="@+id/textView3"
@@ -45,6 +45,14 @@
         android:text="In this sos game, the first player always starts with an S. The object in this game is to get SOS in a row. Your opposer can win with the same way. There are 10 rounds total, first to complete all rounds wins game."
         android:textColor="@color/buttonNotPressed"
         android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="match_parent"
+        android:layout_height="57dp"
+        android:text="Developer: Michael Pender"
+        android:textColor="#00ff0f" />
+
 
 
 </LinearLayout>

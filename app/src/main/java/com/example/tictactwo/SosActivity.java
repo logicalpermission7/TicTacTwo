@@ -111,12 +111,12 @@ public class SosActivity extends Activity implements View.OnClickListener {
         } else if (roundCount == 16) {
             draw();
 
-        } else if (player1Points == 10) {
+        } else if (player1Points == 3) {
             finalWinner1();
             soundPool.play(sound2, 1, 1, 0, 0, 1);
 
 
-        } else if(player2Points == 10){
+        } else if(player2Points == 3){
             finalWinner1();
             soundPool.play(sound2, 1, 1, 0, 0, 1);
 
@@ -355,18 +355,17 @@ public class SosActivity extends Activity implements View.OnClickListener {
 
     private void draw() {
         LayoutInflater inflater=getLayoutInflater();
-        View toastLayout=inflater.inflate(R.layout.custom_toast3,(ViewGroup)findViewById(R.id.showCustom));
+        View toastLayout=inflater.inflate(R.layout.custom_toast7,(ViewGroup)findViewById(R.id.showCustom));
         Toast toast=new Toast(getApplicationContext());
         toast.setDuration(Toast.LENGTH_LONG);
         toast.setView(toastLayout);
         toast.show();
-        soundPool.play(sound2, 1, 1, 0, 0, 1);
         resetBoard1();
     }
 
     private void updatePointsText() {
-        textViewPlayer1.setText( player1Points + " Out of 10 Rounds ");
-        textViewPlayer2.setText( player2Points + " Out of 10 Rounds ");
+        textViewPlayer1.setText( player1Points + " Out of 3 Rounds ");
+        textViewPlayer2.setText( player2Points + " Out of 3 Rounds ");
     }
 
     private void resetBoard1() {
@@ -401,7 +400,7 @@ public class SosActivity extends Activity implements View.OnClickListener {
         resetBoard1();
         resetGame();
         LayoutInflater inflater=getLayoutInflater();
-        View toastLayout=inflater.inflate(R.layout.custom_toast4,(ViewGroup)findViewById(R.id.showCustom));
+        View toastLayout=inflater.inflate(R.layout.custom_toast6,(ViewGroup)findViewById(R.id.showCustom));
         Toast toast=new Toast(getApplicationContext());
         toast.setDuration(Toast.LENGTH_LONG);
         toast.setView(toastLayout);

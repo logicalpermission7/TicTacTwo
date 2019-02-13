@@ -57,7 +57,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="@android:color/background_dark"
-            android:textSize="60sp" />
+            android:textSize="100sp" />
 
         <Button
             android:id="@+id/button_01"
@@ -65,7 +65,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="@android:color/holo_orange_light"
-            android:textSize="60sp" />
+            android:textSize="100sp" />
 
         <Button
             android:id="@+id/button_02"
@@ -73,7 +73,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="@android:color/background_dark"
-            android:textSize="60sp" />
+            android:textSize="100sp" />
 
         <Button
             android:id="@+id/button_03"
@@ -81,7 +81,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="@android:color/holo_blue_bright"
-            android:textSize="60sp" />
+            android:textSize="100sp" />
 
     </LinearLayout>
 
@@ -96,7 +96,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="@android:color/holo_orange_dark"
-            android:textSize="60sp" />
+            android:textSize="100sp" />
 
         <Button
             android:id="@+id/button_11"
@@ -104,7 +104,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="@android:color/holo_blue_light"
-            android:textSize="60sp" />
+            android:textSize="100sp" />
 
         <Button
             android:id="@+id/button_12"
@@ -112,7 +112,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="@android:color/holo_purple"
-            android:textSize="60sp" />
+            android:textSize="100sp" />
 
         <Button
             android:id="@+id/button_13"
@@ -120,7 +120,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="@android:color/background_dark"
-            android:textSize="60sp" />
+            android:textSize="100sp" />
 
     </LinearLayout>
 
@@ -135,7 +135,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="@android:color/holo_purple"
-            android:textSize="60sp" />
+            android:textSize="100sp" />
 
         <Button
             android:id="@+id/button_21"
@@ -143,7 +143,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="@android:color/background_dark"
-            android:textSize="60sp" />
+            android:textSize="100sp" />
 
         <Button
             android:id="@+id/button_22"
@@ -151,7 +151,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="@android:color/holo_green_light"
-            android:textSize="60sp" />
+            android:textSize="100sp" />
 
         <Button
             android:id="@+id/button_23"
@@ -159,7 +159,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="@android:color/holo_orange_dark"
-            android:textSize="60sp" />
+            android:textSize="100sp" />
 
     </LinearLayout>
 
@@ -174,7 +174,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="@android:color/background_dark"
-            android:textSize="60sp" />
+            android:textSize="100sp" />
 
         <Button
             android:id="@+id/button_31"
@@ -182,7 +182,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="@android:color/holo_green_light"
-            android:textSize="60sp" />
+            android:textSize="100sp" />
 
         <Button
             android:id="@+id/button_32"
@@ -190,7 +190,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="@android:color/holo_orange_light"
-            android:textSize="60sp" />
+            android:textSize="100sp" />
 
         <Button
             android:id="@+id/button_33"
@@ -198,7 +198,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="@android:color/background_dark"
-            android:textSize="60sp" />
+            android:textSize="100sp" />
 
 
     </LinearLayout>

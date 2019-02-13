@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:gravity="center"
-    android:orientation="vertical">
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
 
     <TextView
-        android:layout_width="453dp"
-        android:layout_height="751dp"
+        android:layout_width="439dp"
+        android:layout_height="794dp"
         android:layout_gravity="center"
         android:background="#000000"
-        android:drawableBottom="@drawable/skull"
         android:drawablePadding="10dp"
         android:gravity="center"
         android:padding="15dp"
-        android:text="PLAYER 2: WHAT A LOSER!"
+        android:text="YES!!! Go subscribe at wwww.meandmike.com and get your free t-shirt. Thanks for playing."
         android:textColor="#ff0000"
-        android:textSize="30sp" />
+        android:textSize="50sp" />
+
+
+
 
 
 </LinearLayout>

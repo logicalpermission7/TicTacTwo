@@ -3,11 +3,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#111111">
+    android:background="@color/colorAccent">
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="150dp">
+        android:layout_height="152dp">
 
         <TextView
             android:id="@+id/text_view_p1"
@@ -38,9 +38,9 @@
             android:layout_marginStart="46dp"
             android:layout_marginRight="260dp"
             android:layout_marginBottom="10dp"
-            android:background="#111111"
+            android:background="@color/colorAccent"
             android:text="New Game"
-            android:textColor="#add8e6"
+            android:textColor="#00ff0f"
             android:textSize="20sp" />
 
     </RelativeLayout>
@@ -55,7 +55,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@color/colorAccent"
+            android:background="@android:color/background_dark"
             android:freezesText="true"
             android:textSize="100sp" />
 

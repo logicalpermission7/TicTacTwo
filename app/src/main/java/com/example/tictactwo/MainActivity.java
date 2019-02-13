@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
-        final Button sosButton = findViewById(R.id.button_sos);
+        Button sosButton = findViewById(R.id.button_sos);
         sosButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {

@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:gravity="center"
-    android:orientation="vertical">
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
 
     <TextView
-        android:layout_width="446dp"
-        android:layout_height="754dp"
+        android:layout_width="439dp"
+        android:layout_height="740dp"
         android:layout_gravity="center"
         android:background="#ffffff"
-        android:drawableBottom="@drawable/win"
         android:drawablePadding="10dp"
         android:gravity="center"
         android:padding="15dp"
-        android:text="PLAYER 1 IS THE WINNER!!"
+        android:text="DRAW!"
         android:textColor="#ff0000"
-        android:textSize="30sp" />
+        android:textSize="100sp" />
+
+
 
 </LinearLayout>
