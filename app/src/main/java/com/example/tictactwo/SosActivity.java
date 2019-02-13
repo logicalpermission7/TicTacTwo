@@ -54,9 +54,8 @@ public class SosActivity extends Activity implements View.OnClickListener {
         sound1 = soundPool.load(this, R.raw.tic, 1);
         sound2 = soundPool.load(this, R.raw.yes, 1);
 
-
-
 //-------------------------------------------------------------To play sounds from a sound pool end
+
         for (int i = 0; i < 4; i++) {
             for (int j = 0; j < 4; j++) {
                 String buttonID = "button_" + i + j;
@@ -105,12 +104,12 @@ public class SosActivity extends Activity implements View.OnClickListener {
         } else if (roundCount == 16) {
             draw();
 
-        } else if (player1Points == 10) {
+        } else if (player1Points == 5) {
             finalWinner1();
             soundPool.play(sound2, 1, 1, 0, 0, 1);
 
 
-        } else if(player2Points == 10){
+        } else if(player2Points == 5){
             finalWinner1();
             soundPool.play(sound2, 1, 1, 0, 0, 1);
 
@@ -359,8 +358,8 @@ public class SosActivity extends Activity implements View.OnClickListener {
     }
 
     private void updatePointsText() {
-        textViewPlayer1.setText( player1Points + " Out of 10 Rounds ");
-        textViewPlayer2.setText( player2Points + " Out of 10 Rounds ");
+        textViewPlayer1.setText( player1Points + " Out of 5 Rounds ");
+        textViewPlayer2.setText( player2Points + " Out of 5 Rounds ");
     }
 
     private void resetBoard1() {
