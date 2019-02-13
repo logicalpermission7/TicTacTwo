@@ -21,22 +21,16 @@ public class SosActivity extends Activity implements View.OnClickListener {
     private boolean player1Turn = true;
     private boolean player2Turn = true;
 
-
     private int roundCount;
 
     private int player1Points;
-
     private int player2Points;
-
-
 
     private TextView textViewPlayer1;
     private TextView textViewPlayer2;
     private SoundPool soundPool;
     private int sound1;
     private int sound2;
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

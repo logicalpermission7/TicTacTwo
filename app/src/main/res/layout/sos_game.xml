@@ -7,7 +7,7 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="71dp"
+        android:layout_height="101dp"
         android:background="@drawable/beach">
 
         <TextView
@@ -67,7 +67,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@drawable/water"
+            android:background="@drawable/sand"
             android:textSize="60sp" />
 
         <Button
@@ -83,7 +83,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@drawable/water"
+            android:background="@drawable/sand"
             android:textSize="60sp" />
 
     </LinearLayout>
@@ -98,7 +98,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@drawable/water"
+            android:background="@drawable/sand"
             android:textSize="60sp" />
 
         <Button
@@ -114,7 +114,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@drawable/water"
+            android:background="@drawable/sand"
             android:textSize="60sp" />
 
         <Button
@@ -145,7 +145,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@drawable/water"
+            android:background="@drawable/sand"
             android:textSize="60sp" />
 
         <Button
@@ -161,7 +161,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@drawable/water"
+            android:background="@drawable/sand"
             android:textSize="60sp" />
 
     </LinearLayout>
@@ -176,7 +176,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@drawable/water"
+            android:background="@drawable/sand"
             android:textSize="60sp" />
 
         <Button
@@ -192,7 +192,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@drawable/water"
+            android:background="@drawable/sand"
             android:textSize="60sp" />
 
         <Button
@@ -202,11 +202,17 @@
             android:layout_weight="1"
             android:background="@drawable/water"
             android:textSize="60sp" />
-
-
     </LinearLayout>
 
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
 
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="121dp"
+            android:background="@drawable/holiday" />
+    </LinearLayout>
 </LinearLayout>
 
 
