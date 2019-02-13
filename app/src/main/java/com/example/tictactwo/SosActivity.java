@@ -28,6 +28,7 @@ public class SosActivity extends Activity implements View.OnClickListener {
 
     private TextView textViewPlayer1;
     private TextView textViewPlayer2;
+
     private SoundPool soundPool;
     private int sound1;
     private int sound2;
@@ -110,7 +111,7 @@ public class SosActivity extends Activity implements View.OnClickListener {
 
 
         } else if(player2Points == 5){
-            finalWinner1();
+            finalWinner2();
             soundPool.play(sound2, 1, 1, 0, 0, 1);
 
         } else {
@@ -334,6 +335,12 @@ public class SosActivity extends Activity implements View.OnClickListener {
 
     private void player1Win() {
         player1Points++;
+        LayoutInflater inflater=getLayoutInflater();
+        View toastLayout=inflater.inflate(R.layout.custom_toast6,(ViewGroup)findViewById(R.id.showCustom));
+        Toast toast=new Toast(getApplicationContext());
+        toast.setDuration(Toast.LENGTH_LONG);
+        toast.setView(toastLayout);
+        toast.show();
         soundPool.play(sound2, 1, 1, 0, 0, 1);
         updatePointsText();
         resetBoard1();
@@ -341,6 +348,12 @@ public class SosActivity extends Activity implements View.OnClickListener {
 
     private void player2Win() {
         player2Points++;
+        LayoutInflater inflater=getLayoutInflater();
+        View toastLayout=inflater.inflate(R.layout.custom_toast7,(ViewGroup)findViewById(R.id.showCustom));
+        Toast toast=new Toast(getApplicationContext());
+        toast.setDuration(Toast.LENGTH_LONG);
+        toast.setView(toastLayout);
+        toast.show();
         soundPool.play(sound2, 1, 1, 0, 0, 1);
         updatePointsText();
         resetBoard2();
@@ -348,7 +361,7 @@ public class SosActivity extends Activity implements View.OnClickListener {
 
     private void draw() {
         LayoutInflater inflater=getLayoutInflater();
-        View toastLayout=inflater.inflate(R.layout.custom_toast3,(ViewGroup)findViewById(R.id.showCustom));
+        View toastLayout=inflater.inflate(R.layout.custom_toast8,(ViewGroup)findViewById(R.id.showCustom));
         Toast toast=new Toast(getApplicationContext());
         toast.setDuration(Toast.LENGTH_LONG);
         toast.setView(toastLayout);
@@ -394,7 +407,18 @@ public class SosActivity extends Activity implements View.OnClickListener {
         resetBoard1();
         resetGame();
         LayoutInflater inflater=getLayoutInflater();
-        View toastLayout=inflater.inflate(R.layout.custom_toast4,(ViewGroup)findViewById(R.id.showCustom));
+        View toastLayout=inflater.inflate(R.layout.custom_toast9,(ViewGroup)findViewById(R.id.showCustom));
+        Toast toast=new Toast(getApplicationContext());
+        toast.setDuration(Toast.LENGTH_LONG);
+        toast.setView(toastLayout);
+        toast.show();
+    }
+
+    private void finalWinner2(){
+        resetBoard1();
+        resetGame();
+        LayoutInflater inflater=getLayoutInflater();
+        View toastLayout=inflater.inflate(R.layout.custom_toast10,(ViewGroup)findViewById(R.id.showCustom));
         Toast toast=new Toast(getApplicationContext());
         toast.setDuration(Toast.LENGTH_LONG);
         toast.setView(toastLayout);
